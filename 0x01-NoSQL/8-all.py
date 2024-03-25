@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """
     a Python module for task 8 of NoSQL project
 """
