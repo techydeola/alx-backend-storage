@@ -12,5 +12,5 @@ def list_all(mongo_collection):
     coll_list = []
     for obj in mongo_collection.find():
         coll_list.append(obj)
-    
+
     return coll_list
