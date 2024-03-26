@@ -7,7 +7,7 @@
 def insert_school(mongo_collection, **kwargs):
     """
         a function that inserts a new document in a collection
-        Return: nothing
+        Return: id
     """
     data = {key: value for key, value in kwargs.items()}
     result = mongo_collection.insert_one(data)
