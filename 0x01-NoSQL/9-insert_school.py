@@ -10,4 +10,6 @@ def insert_school(mongo_collection, **kwargs):
         Return: nothing
     """
     data = {key: value for key, value in kwargs.items()}
-    mongo_collection.insert_one(data)
+    result = mongo_collection.insert_one(data)
+
+    return result.inserted_id
