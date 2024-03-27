@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-web cache and tracker
+web cache and tracker module for alx project
 """
 import requests
 import redis
@@ -10,8 +10,9 @@ store = redis.Redis()
 
 
 def count_url_access(method):
-    """ Decorator counting how many times
-    a URL is accessed """
+    """
+        Decorator counting how many times a URL is accessed
+    """
     @wraps(method)
     def wrapper(url):
         cached_key = "cached:" + url
