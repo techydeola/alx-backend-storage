@@ -24,6 +24,6 @@ class Cache:
             a function that takes a data and returns a string
         """
         key = str(uuid.uuid4())
-        self._redis[key] = data
+        self._redis.set(key, data)
 
         return key
